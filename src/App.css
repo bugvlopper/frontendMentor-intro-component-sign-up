@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body{
+  height: 100vh;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url("./images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  display: flex;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.offer-info{
+  max-width: 500px;
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-right: 2rem;
+}
+h1{
+font-size: 3rem;
+}
+.subscription-info{
+  max-width: 540px;
+}
+.subscription-info p:first-child{
+  height: 60px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: hsl(248, 32%, 49%);
   color: white;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+}
+.subscription-info p:first-child span{
+  font-weight: 700;
+}
+.form-box{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 540px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+
+}
+.form-box p{
+  font-size: .7rem;
+  margin-top: 1rem;
+  color: hsl(246, 25%, 77%);
+}
+.form-box p a{
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+  font-weight: 700;
+}
+form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+form button{
+  height: 50px;
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-width: 3px;
+  border-color: hsl(154, 59%, 51%, 0.3);
+  font-weight: 600;
+  font-family: "poppins";
+  font-size: .9rem;
+  letter-spacing: .5px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button:hover{
+  background-color: hsl(154, 59%, 51%, 0.5);
+  cursor: pointer;
+}
+form input{
+  height: 50px;
+  padding-left: 1rem;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+form input::placeholder{
+  font-weight: 700;
+  font-family: "poppins";
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+}
+.input-container p{
+  display: none;
+}
+.error{
+  position: relative;
+}
+.error input{
+  color: hsl(0, 100%, 74%);
+  border-color: hsl(0, 100%, 74%);
+  border-width: 2px;
+  margin-bottom: 0;
+}
+.error input::placeholder{
+  color: hsl(0, 100%, 74%);
+}
+.error::after{
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  top: 13px;
+  right: 25px;
+}
+.error input ~ p{
+  display: flex;
+  align-self: flex-end;
+  color: hsl(0, 100%, 74%);
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 960px) {
+  body{
+    height: auto;
+  }
+  .App{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+  }
+  .offer-info{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  h1{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .subscription-info, .offer-info{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .form-box:last-child p{
+    text-align: center;
+    font-size: .65rem;
+  }
+  .form-box{
+    padding: 25px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 460px) {
+  .subscription-info p:first-child{
+    display: block;
+    text-align: center;
+    height: 80px;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
+
+
+
+
